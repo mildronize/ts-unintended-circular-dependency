@@ -1,0 +1,30 @@
+{
+  "name": "blog-constant-with-dependency-injection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx src/main.ts --bundle --platform=node --target=node16",
+    "format": "prettier --write '**/*.ts'",
+    "typecheck": "tsc",
+    "format-check": "prettier --check '**/*.ts'",
+    "bulid": "esbuild src/main.ts --bundle --platform=node --target=node16 --outdir=out",
+    "all": "npm run typecheck && npm run format && npm run build "
+  },
+  "author": "Thada Wangthammang",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.10",
+    "prettier": "2.5.1",
+    "tsx": "^3.10.1",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.7.0"
+  }
+}
